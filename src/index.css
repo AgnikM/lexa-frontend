@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #0b1326;
+  --color-surface-dim: #0b1326;
+  --color-surface-bright: #31394d;
+  --color-surface-variant: #2d3449;
+  --color-surface-container: #171f33;
+  --color-surface-container-low: #131b2e;
+  --color-surface-container-lowest: #060e20;
+  --color-surface-container-high: #222a3d;
+  --color-surface-container-highest: #2d3449;
+  --color-surface-tint: #4edea3;
+  
+  --color-primary: #4edea3;
+  --color-primary-container: #10b981;
+  --color-primary-fixed: #6ffbbe;
+  --color-primary-fixed-dim: #4edea3;
+  --color-inverse-primary: #006c49;
+  
+  --color-on-primary: #003824;
+  --color-on-primary-fixed: #002113;
+  --color-on-primary-fixed-variant: #005236;
+  --color-on-primary-container: #00422b;
+  
+  --color-secondary: #bec6e0;
+  --color-secondary-container: #3f465c;
+  --color-secondary-fixed: #dae2fd;
+  --color-secondary-fixed-dim: #bec6e0;
+  --color-on-secondary: #283044;
+  --color-on-secondary-fixed: #131b2e;
+  --color-on-secondary-fixed-variant: #3f465c;
+  --color-on-secondary-container: #adb4ce;
+  
+  --color-tertiary: #ffb3af;
+  --color-tertiary-container: #fc7c78;
+  --color-tertiary-fixed: #ffdad7;
+  --color-tertiary-fixed-dim: #ffb3af;
+  --color-on-tertiary: #650911;
+  --color-on-tertiary-fixed: #410005;
+  --color-on-tertiary-fixed-variant: #842225;
+  --color-on-tertiary-container: #711419;
+  
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error: #690005;
+  --color-on-error-container: #ffdad6;
+  
+  --color-background: #0b1326;
+  --color-on-background: #dae2fd;
+  --color-on-surface: #dae2fd;
+  --color-on-surface-variant: #bbcabf;
+  
+  --color-outline: #86948a;
+  --color-outline-variant: #3c4a42;
+  --color-inverse-surface: #dae2fd;
+  --color-inverse-on-surface: #283044;
+  
+  --font-headline: 'Domine', serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-label: 'Lexend', sans-serif;
+  --font-display: 'Domine', serif;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-surface-container);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.glass-panel {
+  background: rgba(45, 52, 73, 0.6);
+  backdrop-filter: blur(16px);
+}
+
+.glass-card {
+  background: rgba(45, 52, 73, 0.6);
+  backdrop-filter: blur(12px);
+}
+
+.cyber-gradient {
+  background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.125) 0%, #0b1326 100%);
+}
+
+.cyber-bg {
+  background: radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+              radial-gradient(circle at 80% 70%, rgba(78, 222, 163, 0.06) 0%, transparent 40%),
+              #0b1326;
+}
+
+.tactical-grid {
+  background-image: radial-gradient(rgba(78, 222, 163, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.tactical-overlay {
+  background-image: linear-gradient(rgba(60, 74, 66, 0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(60, 74, 66, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.hero-split {
+  min-height: calc(100vh - 80px);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #4edea3 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #4edea3 0%, #10b981 100%);
+}
+
+.kinetic-trigger {
+  background: linear-gradient(135deg, #4edea3 0%, #10b981 100%);
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #0b1326;
+  color: #dae2fd;
+}
+
+::selection {
+  background-color: #4edea3;
+  color: #003824;
+}
