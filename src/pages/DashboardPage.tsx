@@ -57,9 +57,9 @@ export default function DashboardPage() {
       <main className="flex-1 overflow-y-auto bg-surface relative">
         <div className="max-w-6xl mx-auto p-8">
 
-          <h1 className="text-3xl font-bold mb-6">
-            Hello, <span className="text-primary">Admin</span>
-          </h1>
+      <h1 className="text-3xl font-bold mb-6">
+         Hello, <span className="text-primary">Admin 🚀</span>
+      </h1>
 
           <textarea
             value={inputText}
