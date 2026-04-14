@@ -36,12 +36,25 @@ export default function DashboardPage() {
   const [inputText, setInputText] = useState('');
   const [isScanning, setIsScanning] = useState(false);
 
-  const handleScan = () => {
-    if (inputText.trim()) {
-      setIsScanning(true);
-      setTimeout(() => setIsScanning(false), 3000);
-    }
-  };
+  const handleScan = async () => {
+  if (!inputText.trim()) return;
+
+  try {
+    setIsScanning(true);
+
+    const res = await fetch("https://lexa-backend-ivhg.onrender.com");
+    const data = await res.json();
+
+    console.log(data);
+    alert(data.message); // test ke liye
+
+  } catch (error) {
+    console.error(error);
+    alert("Error connecting to backend");
+  } finally {
+    setIsScanning(false);
+  }
+};
 
   return (
     <div className="flex flex-1 overflow-hidden">
