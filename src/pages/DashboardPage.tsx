@@ -1,42 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const historyItems = [
-  {
-    name: 'MAL_DOC_INVOICE.vbs',
-    status: 'CLEAN',
-    time: '2 mins ago',
-    hash: 'SHA-256: 4A8E...',
-    isThreat: false
-  },
-  {
-    name: 'UNKNOWN_PAYLOAD_88.bin',
-    status: 'THREAT',
-    time: '1 hour ago',
-    hash: 'IP: 192.168.1.1',
-    isThreat: true
-  },
-  {
-    name: 'update_service_config.exe',
-    status: 'CLEAN',
-    time: 'Yesterday',
-    hash: 'System Scan',
-    isThreat: false
-  },
-  {
-    name: 'login_handler.php',
-    status: 'CLEAN',
-    time: 'Yesterday',
-    hash: 'Web Audit',
-    isThreat: false
-  }
-];
+
 
 export default function DashboardPage() {
   const [inputText, setInputText] = useState('');
   const [isScanning, setIsScanning] = useState(false);
 
-  // ✅ FIXED FUNCTION
+  //  FIXED FUNCTION
   const handleScan = async () => {
     if (!inputText.trim()) return;
 
